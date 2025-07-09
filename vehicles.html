@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Fleet - Elite Drive</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for Inter font and additional tweaks */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a; /* Dark background for luxury feel */
+            color: #e0e0e0; /* Light text color */
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            color: #facc15; /* Gold accent */
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #facc15; /* Gold accent line */
+            border-radius: 9999px;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.25);
+        }
+        /* Ensure content is below fixed header */
+        main {
+            padding-top: 6rem; /* Adjust based on header height */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-gray-900 text-white p-4 shadow-lg fixed w-full z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-facc15 tracking-wide">EliteDrive</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-facc15 transition duration-300">Home</a>
+                <a href="about.html" class="hover:text-facc15 transition duration-300">About Us</a>
+                <a href="vehicles.html" class="hover:text-facc15 transition duration-300">Luxury Fleet</a>
+                <a href="budgetfriendly.html" class="hover:text-facc15 transition duration-300">Budget Fun</a>
+                <a href="index.html#contact-section" class="hover:text-facc15 transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 mt-4 rounded-lg shadow-xl">
+            <a href="index.html" class="block py-3 px-4 text-center hover:bg-gray-700 rounded-t-lg transition duration-300">Home</a>
+            <a href="about.html" class="block py-3 px-4 text-center hover:bg-gray-700 transition duration-300">About Us</a>
+            <a href="vehicles.html" class="block py-3 px-4 text-center hover:bg-gray-700 transition duration-300">Luxury Fleet</a>
+            <a href="budgetfriendly.html" class="block py-3 px-4 text-center hover:bg-gray-700 transition duration-300">Budget Fun</a>
+            <a href="index.html#contact-section" class="block py-3 px-4 text-center hover:bg-gray-700 rounded-b-lg transition duration-300">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Luxury Fleet Section -->
+        <section id="fleet" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold section-title">Our Exquisite Luxury Fleet</h2>
+                <p class="mt-8 text-lg mb-12 max-w-4xl mx-auto">
+                    Indulge in unparalleled elegance and performance. Our luxury collection features the world's most desired automobiles, meticulously maintained for your ultimate driving pleasure.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
+                    <!-- Car Card 1 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden card-shadow transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/333333/FFFFFF?text=Rolls-Royce+Phantom" alt="Rolls-Royce Phantom" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-facc15 mb-2">Rolls-Royce Phantom</h3>
+                            <p class="text-gray-400 text-sm mb-4">The epitome of automotive luxury, offering an unparalleled ride.</p>
+                            <span class="text-xl font-bold text-white block mb-4">$1,500 / day</span>
+                            <button class="bg-facc15 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                Rent Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 2 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden card-shadow transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/333333/FFFFFF?text=Lamborghini+Aventador" alt="Lamborghini Aventador" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-facc15 mb-2">Lamborghini Aventador</h3>
+                            <p class="text-gray-400 text-sm mb-4">Unleash the beast. Pure adrenaline and breathtaking design.</p>
+                            <span class="text-xl font-bold text-white block mb-4">$2,000 / day</span>
+                            <button class="bg-facc15 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                Rent Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 3 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden card-shadow transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/333333/FFFFFF?text=Mercedes-Benz+S-Class" alt="Mercedes-Benz S-Class" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-facc15 mb-2">Mercedes-Benz S-Class</h3>
+                            <p class="text-gray-400 text-sm mb-4">Sophistication meets innovation. The ultimate executive sedan.</p>
+                            <span class="text-xl font-bold text-white block mb-4">$800 / day</span>
+                            <button class="bg-facc15 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                Rent Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 4 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden card-shadow transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/333333/FFFFFF?text=Porsche+911+Carrera" alt="Porsche 911 Carrera" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-facc15 mb-2">Porsche 911 Carrera</h3>
+                            <p class="text-gray-400 text-sm mb-4">Timeless sports car performance and iconic design.</p>
+                            <span class="text-xl font-bold text-white block mb-4">$1,200 / day</span>
+                            <button class="bg-facc15 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                Rent Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 5 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden card-shadow transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/333333/FFFFFF?text=Ferrari+488+GTB" alt="Ferrari 488 GTB" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-facc15 mb-2">Ferrari 488 GTB</h3>
+                            <p class="text-gray-400 text-sm mb-4">Experience the passion and power of Italian engineering.</p>
+                            <span class="text-xl font-bold text-white block mb-4">$1,800 / day</span>
+                            <button class="bg-facc15 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                Rent Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 6 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden card-shadow transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/333333/FFFFFF?text=Bentley+Continental+GT" alt="Bentley Continental GT" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-facc15 mb-2">Bentley Continental GT</h3>
+                            <p class="text-gray-400 text-sm mb-4">Grand touring redefined with exquisite craftsmanship.</p>
+                            <span class="text-xl font-bold text-white block mb-4">$1,300 / day</span>
+                            <button class="bg-facc15 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                Rent Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center border-t border-gray-700">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 EliteDrive. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="hover:text-facc15 transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-facc15 transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

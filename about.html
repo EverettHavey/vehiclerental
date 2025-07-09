@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Elite Drive</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for Inter font and additional tweaks */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a; /* Dark background for luxury feel */
+            color: #e0e0e0; /* Light text color */
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            color: #facc15; /* Gold accent */
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #facc15; /* Gold accent line */
+            border-radius: 9999px;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.25);
+        }
+        /* Ensure content is below fixed header */
+        main {
+            padding-top: 6rem; /* Adjust based on header height */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-gray-900 text-white p-4 shadow-lg fixed w-full z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-facc15 tracking-wide">EliteDrive</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-facc15 transition duration-300">Home</a>
+                <a href="about.html" class="hover:text-facc15 transition duration-300">About Us</a>
+                <a href="vehicles.html" class="hover:text-facc15 transition duration-300">Luxury Fleet</a>
+                <a href="budgetfriendly.html" class="hover:text-facc15 transition duration-300">Budget Fun</a>
+                <a href="index.html#contact-section" class="hover:text-facc15 transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 mt-4 rounded-lg shadow-xl">
+            <a href="index.html" class="block py-3 px-4 text-center hover:bg-gray-700 rounded-t-lg transition duration-300">Home</a>
+            <a href="about.html" class="block py-3 px-4 text-center hover:bg-gray-700 transition duration-300">About Us</a>
+            <a href="vehicles.html" class="block py-3 px-4 text-center hover:bg-gray-700 transition duration-300">Luxury Fleet</a>
+            <a href="budgetfriendly.html" class="block py-3 px-4 text-center hover:bg-gray-700 transition duration-300">Budget Fun</a>
+            <a href="index.html#contact-section" class="block py-3 px-4 text-center hover:bg-gray-700 rounded-b-lg transition duration-300">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold section-title">About EliteDrive</h2>
+                <p class="mt-8 text-lg leading-relaxed max-w-4xl mx-auto">
+                    Welcome to EliteDrive, where your journey is our passion. Established in 2015,
+                    we set out with a simple yet ambitious goal: to redefine the vehicle rental experience.
+                    Whether you seek the unparalleled elegance of a luxury automobile or the sheer joy
+                    of a uniquely unconventional ride, EliteDrive is committed to delivering excellence.
+                </p>
+                <p class="mt-6 text-lg leading-relaxed max-w-4xl mx-auto">
+                    Our meticulously curated fleet of high-end vehicles offers the ultimate in comfort,
+                    performance, and style, perfect for executive travel, special events, or simply
+                    indulging in the drive of a lifetime. Beyond luxury, we embrace the spirit of fun
+                    and adventure with our "Budget Fun" collection, featuring quirky and memorable
+                    transportation options that promise smiles and unforgettable moments.
+                </p>
+                <p class="mt-6 text-lg leading-relaxed max-w-4xl mx-auto">
+                    At EliteDrive, we pride ourselves on our personalized customer service, ensuring
+                    a seamless and enjoyable rental process from start to finish. Our dedicated team
+                    is always ready to assist you, making sure your needs are met with professionalism
+                    and a friendly approach. Experience the EliteDrive difference – where every journey
+                    is an experience to cherish.
+                </p>
+
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-900 p-8 rounded-xl card-shadow">
+                        <h3 class="text-2xl font-semibold text-facc15 mb-3">Our Mission</h3>
+                        <p class="text-gray-400">To provide diverse, high-quality vehicle rental experiences, from ultimate luxury to unique, fun adventures, with unparalleled customer service.</p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-xl card-shadow">
+                        <h3 class="text-2xl font-semibold text-facc15 mb-3">Our Vision</h3>
+                        <p class="text-gray-400">To be the leading innovative vehicle rental company, known for our exceptional fleet and memorable customer journeys.</p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-xl card-shadow">
+                        <h3 class="text-2xl font-semibold text-facc15 mb-3">Our Values</h3>
+                        <p class="text-gray-400">Excellence, Customer Focus, Innovation, Integrity, and Fun are at the core of everything we do.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center border-t border-gray-700">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 EliteDrive. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="hover:text-facc15 transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-facc15 transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget-Friendly Fun - Elite Drive</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for Inter font and additional tweaks */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a; /* Dark background */
+            color: #e0e0e0; /* Light text color */
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            color: #60a5fa; /* Blue accent for budget-friendly */
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #60a5fa; /* Blue accent line */
+            border-radius: 9999px;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.25);
+        }
+        /* Ensure content is below fixed header */
+        main {
+            padding-top: 6rem; /* Adjust based on header height */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-gray-900 text-white p-4 shadow-lg fixed w-full z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-facc15 tracking-wide">EliteDrive</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-facc15 transition duration-300">Home</a>
+                <a href="about.html" class="hover:text-facc15 transition duration-300">About Us</a>
+                <a href="vehicles.html" class="hover:text-facc15 transition duration-300">Luxury Fleet</a>
+                <a href="budgetfriendly.html" class="hover:text-facc15 transition duration-300">Budget Fun</a>
+                <a href="index.html#contact-section" class="hover:text-facc15 transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 mt-4 rounded-lg shadow-xl">
+            <a href="index.html" class="block py-3 px-4 text-center hover:bg-gray-700 rounded-t-lg transition duration-300">Home</a>
+            <a href="about.html" class="block py-3 px-4 text-center hover:bg-gray-700 transition duration-300">About Us</a>
+            <a href="vehicles.html" class="block py-3 px-4 text-center hover:bg-gray-700 transition duration-300">Luxury Fleet</a>
+            <a href="budgetfriendly.html" class="block py-3 px-4 text-center hover:bg-gray-700 transition duration-300">Budget Fun</a>
+            <a href="index.html#contact-section" class="block py-3 px-4 text-center hover:bg-gray-700 rounded-b-lg transition duration-300">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Budget-Friendly Fun Section -->
+        <section id="budget-fun" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold section-title">Budget-Friendly Fun Fleet</h2>
+                <p class="mt-8 text-lg mb-12 max-w-4xl mx-auto">
+                    Who says fun has to be expensive? Our unique collection of budget-friendly vehicles
+                    is perfect for parades, pranks, parties, or just making a statement without breaking the bank!
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
+                    <!-- Vehicle Card 1: Lawnmower Car -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden card-shadow transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/225522/FFFFFF?text=Lawnmower+Car" alt="Lawnmower Car" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-blue-400 mb-2">The Grasshopper</h3>
+                            <p class="text-gray-400 text-sm mb-4">A street-legal lawnmower. Perfect for quick errands and confusing neighbors.</p>
+                            <span class="text-xl font-bold text-white block mb-4">$50 / day</span>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                Rent Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Card 2: Portable Potty Car -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden card-shadow transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/553311/FFFFFF?text=Portable+Potty+Car" alt="Portable Potty Car" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-blue-400 mb-2">The Relief Rider</h3>
+                            <p class="text-gray-400 text-sm mb-4">Never be caught without a restroom again. Fully functional (mostly).</p>
+                            <span class="text-xl font-bold text-white block mb-4">$75 / day</span>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                Rent Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Card 3: Shopping Cart Racer -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden card-shadow transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/888888/FFFFFF?text=Shopping+Cart+Racer" alt="Shopping Cart Racer" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-blue-400 mb-2">The Trolley Dash</h3>
+                            <p class="text-gray-400 text-sm mb-4">Experience the thrill of the grocery aisle, on the open road!</p>
+                            <span class="text-xl font-bold text-white block mb-4">$40 / day</span>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                Rent Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Card 4: Giant Rubber Duckie Car -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden card-shadow transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/FFD700/000000?text=Giant+Rubber+Duck" alt="Giant Rubber Duckie Car" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-blue-400 mb-2">The Quacker</h3>
+                            <p class="text-gray-400 text-sm mb-4">Make a splash wherever you go. Honk if you love rubber ducks!</p>
+                            <span class="text-xl font-bold text-white block mb-4">$90 / day</span>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                Rent Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Card 5: Street-Legal Bumper Car -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden card-shadow transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/FF0000/FFFFFF?text=Bumper+Car" alt="Street-Legal Bumper Car" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-blue-400 mb-2">The Bumper Buddy</h3>
+                            <p class="text-gray-400 text-sm mb-4">Relive your arcade glory days on the open road. (Bumping not advised).</p>
+                            <span class="text-xl font-bold text-white block mb-4">$65 / day</span>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                Rent Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Card 6: Hot Dog Stand on Wheels -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden card-shadow transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/AA0000/FFFFFF?text=Hot+Dog+Car" alt="Hot Dog Stand on Wheels" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-blue-400 mb-2">The Wiener Wagon</h3>
+                            <p class="text-gray-400 text-sm mb-4">Serve up smiles (and hot dogs) wherever you park. Grill not included.</p>
+                            <span class="text-xl font-bold text-white block mb-4">$110 / day</span>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                Rent Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- NEW Vehicle Card 7: Bed Car -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden card-shadow transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/777777/FFFFFF?text=Bed+Car" alt="Bed Car" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-blue-400 mb-2">The Dream Cruiser</h3>
+                            <p class="text-gray-400 text-sm mb-4">For those who like to take their naps on the go. Sleep-friendly, road-legal!</p>
+                            <span class="text-xl font-bold text-white block mb-4">$85 / day</span>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                Rent Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- NEW Vehicle Card 8: Couch Car -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden card-shadow transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/996633/FFFFFF?text=Couch+Car" alt="Couch Car" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-blue-400 mb-2">The Sofa So Good</h3>
+                            <p class="text-gray-400 text-sm mb-4">Lounge in comfort while cruising down the street. Perfect for lazy Sundays.</p>
+                            <span class="text-xl font-bold text-white block mb-4">$95 / day</span>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                Rent Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center border-t border-gray-700">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 EliteDrive. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="hover:text-facc15 transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-facc15 transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
